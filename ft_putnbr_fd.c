@@ -6,7 +6,7 @@
 /*   By: miaviles <miaviles@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:53:52 by miaviles          #+#    #+#             */
-/*   Updated: 2024/10/01 18:08:16 by miaviles         ###   ########.fr       */
+/*   Updated: 2024/10/12 13:12:06 by miaviles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		ft_putchar_fd('-', fd);
 		n = -n;
 	}
-	else if (n > 9)
+	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd((n % 10) + '0', fd);
 }

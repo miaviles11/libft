@@ -6,7 +6,7 @@
 /*   By: miaviles <miaviles@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:22:17 by miaviles          #+#    #+#             */
-/*   Updated: 2024/10/11 21:12:54 by miaviles         ###   ########.fr       */
+/*   Updated: 2024/10/12 13:34:19 by miaviles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			count;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	if ((unsigned char *)dest > (unsigned char *)src)
 	{

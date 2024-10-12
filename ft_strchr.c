@@ -6,7 +6,7 @@
 /*   By: miaviles <miaviles@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 17:32:43 by miaviles          #+#    #+#             */
-/*   Updated: 2024/10/01 16:22:16 by miaviles         ###   ########.fr       */
+/*   Updated: 2024/10/12 12:37:33 by miaviles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	count;
+	unsigned int	count;
 
-	if (!s)
-		return (NULL);
 	count = 0;
 	while (s[count])
 	{
@@ -25,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[count]);
 		count++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[count]);
 	return (NULL);
 }

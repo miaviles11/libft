@@ -56,6 +56,9 @@ all: $(NAME)
 $(NAME): $(LIBFT_OBJ)
 	ar -rcs $(NAME) $(LIBFT_OBJ)
 
+bonus: $(LIBFT_OBJ) $(LIBFT_BONUS_OBJ)
+		ar -rcs $(NAME) $(LIBFT_OBJ) $(LIBFT_BONUS_OBJ)
+
 clean:
 	rm -f $(LIBFT_OBJ) $(LIBFT_BONUS_OBJ)
 

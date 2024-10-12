@@ -6,7 +6,7 @@
 /*   By: miaviles <miaviles@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:55:02 by miaviles          #+#    #+#             */
-/*   Updated: 2024/10/03 17:23:38 by miaviles         ###   ########.fr       */
+/*   Updated: 2024/10/12 13:04:53 by miaviles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len_s <= start)
 		len = 0;
 	count = 0;
-	subs = (char *) malloc(len + 1);
+	subs = (char *)malloc((len + 1) * sizeof(char));
 	if (!subs)
 		return (NULL);
-	while (count <= len)
+	while (count < len)
 	{
 		subs[count] = s[start + count];
 		count++;
